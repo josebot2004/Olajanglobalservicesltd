@@ -24,7 +24,7 @@ const projects = [
     id: 4, 
     title: '25kW Solar for Community Clinic', 
     type: 'Solar', 
-    image: '../src/assets/images/project_solar_2.jpg',
+    image: '../assets/images/project_solar_2.jpg',
     description: 'Delivered a 25kW solar installation with backup redundancy, ensuring 24/7 reliable clean energy for critical medical operations.'
   },
   { 
