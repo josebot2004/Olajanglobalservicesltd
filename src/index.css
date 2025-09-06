@@ -1,0 +1,76 @@
+/* Tailwind base layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------- Global Styles ----------------- */
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  --transition-duration: 0.3s;
+}
+
+/* ----------------- Max-Width Container ----------------- */
+.container-max {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* ----------------- Swiper Fix ----------------- */
+.swiper {
+  padding-bottom: 2rem;
+}
+
+/* ----------------- Sticky Header Blur ----------------- */
+.sticky-blur {
+  @apply backdrop-blur-md;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: background-color var(--transition-duration) ease-in-out;
+}
+
+.dark .sticky-blur {
+  background-color: rgba(17, 24, 39, 0.75); /* Tailwind gray-900 w/ opacity */
+}
+
+/* ----------------- Animations ----------------- */
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Slow Bounce */
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-bounceSlow {
+  animation: bounceSlow 2s infinite ease-in-out;
+}
+
+/* ----------------- Utility Enhancements ----------------- */
+/* Smooth hover transitions */
+.transition-smooth {
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+/* Rounded shadow cards default */
+.card-rounded {
+  @apply rounded-2xl shadow-md bg-white border border-gray-100;
+  transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+

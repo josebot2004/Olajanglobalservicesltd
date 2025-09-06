@@ -1,0 +1,24 @@
+# Ignore node_modules folder (VERY IMPORTANT)
+node_modules/
+.npm
+
+# Ignore build/output directories
+dist/
+build/
+.parcel-cache/
+
+# Ignore environment variables and secrets
+.env
+.env.local
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore large assets (unless you have a specific reason to version them)
+*.mp4
+*.mov
+*.avi
+*.zip
+*.rar
+*.log
